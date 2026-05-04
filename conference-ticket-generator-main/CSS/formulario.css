@@ -1,4 +1,39 @@
-.container_form {width:460px;}
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: var(--spacing-400);
+    position: relative; 
+   
+}
+
+.containerIgmLogoFull {
+    position:relative;
+    width: 100%;
+    /* top: var(--spacing-500); */
+} 
+
+.containerIgmLogoFull .img-logo-full {
+  /* Abaixo duas posiveies estruturas para centralizar a IMG dentro do container*/
+  /* position: absolute;
+  left:0;
+  right: 0;
+  bottom:0;
+  top: 0; 
+  margin: auto; */
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+
+} 
+
+ .container_form {
+    width:calc(var(--spacing-800) * 7 + var(--spacing-150));
+    /* width:460px; */
+}
 
 .container_form > form {
     width: 100%;
@@ -11,30 +46,39 @@
 
 .contaienrDiv {
     width: 100%;
-    /* height: 190px; */
     gap:var(--spacing-150);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between; 
+    /* position: relative; */
+    
 }
 
 .contaienrDiv > p {width: 100%;} 
 
 .contaienrDiv .containerImg{
+ /* position: absolute; */
+  padding: var(--spacing-150) var(--spacing-0);
   width: 100%;
   height: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-200);
   border:dashed 1px var(--neutral-700);
   border-radius: var(--spacing-150);
+    transition:all 0.3s ease;
+}
+
+.containerImg:hover    {
+    cursor: pointer;
+    background-color:var(--neutral-500);
+    transform: scale(1.02);
 }
 
 .containerImg > span {
-    /* position: absolute; */
+    position:relative;
     width:calc(var(--spacing-600) + 0.125rem);
     height:calc(var(--spacing-600) + 0.125rem);
     background-color:var(--neutral-700); 
@@ -44,6 +88,10 @@
     background-position: 50%;
 }
 
+/* .img_clound {
+    position:absolute;
+}  */
+
 .contaienrDiv :nth-child(3) {
     width: 100%;
     background-image: url('../assets/images/icon-info.svg');
@@ -51,25 +99,50 @@
     text-align: center; 
 }
 
-.full-name-contaiener {
+
+ .container_label {
    width: 100%;
    display: flex;
    flex-direction: column;
    gap: var(--spacing-150);
 
 }
-/* OBS:Consertar esse input que não recebe entrado de tecla */
-.full-name-contaiener > input {
+
+.container_label > input {
     height:calc(var(--spacing-600) + var(--spacing-075));
     background: none;
     border:solid 1px var(--neutral-500);
     border-radius: var(--spacing-150);
-    padding: 0 var(--spacing-200);
-
-
+    padding: var(--spacing-0) var(--spacing-200);
+    transition: all 0.3s ease;
 }
 
+.container_label > input:hover,
+.container_label > input:focus {
+    outline: none;
+    background-color: var(--neutral-500);
+    transform: scale(1.02);
+    cursor: pointer;
+}
 
+.btn {
+ width: 100%;
+ height:calc(var(--spacing-600) + var(--spacing-075));
+ background-color:var(--orange);
+ border-radius:var(--spacing-150);
+ padding:var(--spacing-200) var(--spacing-300);
+ border: none;
+ transition:all 0.3s ease;
+
+
+} 
+
+.btn:hover,
+.btn:focus {
+    outline: none;
+    cursor: pointer;
+    transform:scale(1.03);
+}
 
 
 
